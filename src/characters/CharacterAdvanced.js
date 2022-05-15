@@ -15,11 +15,11 @@ export default class AdvancedCharacter extends Character {
   }
 
   set attack(value) {
-    this._attack = value;
+    this._initialAttack = value;
   }
 
   get attack() {
-    this._attack *= (1 - (this.distanceToEnemy - 1) * 0.1);
+    this._attack = this._initialAttack * (1 - (this.distanceToEnemy - 1) * 0.1);
     if (this._stoned) {
       this._attack -= Math.log2(this.distanceToEnemy) * 5;
     }

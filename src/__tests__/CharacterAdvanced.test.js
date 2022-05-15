@@ -10,5 +10,7 @@ test.each([
   const unit = new Type(name, distance);
   unit.stoned = stonedFlag;
   expect(unit.attack).toBe(attackValue);
+  expect(unit.attack).toBe(attackValue);
+  expect(unit.attack).toBe(attackValue);
   expect(unit.stoned).toBe(stonedFlag);
 });
